@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "FB Reels Auto Bot",
+  "version": "1.0.0",
+  "description": "Tự động xem và comment Facebook Reels",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["https://www.facebook.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/reels/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "FB Reels Bot"
+  },
+  "commands": {
+    "toggle-bot": {
+      "suggested_key": {
+        "default": "Alt+Q"
+      },
+      "description": "Bật/tắt automation"
+    }
+  }
+}
