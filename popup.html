@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>🎬 FB Reels Bot</h2>
+    </div>
+
+    <div class="status-section">
+      <div class="status-indicator">
+        <span id="statusDot" class="dot off"></span>
+        <span id="statusText">Đã tắt</span>
+      </div>
+      <button id="toggleBtn" class="btn-toggle">BẬT</button>
+    </div>
+
+    <div id="statsSection" class="stats" style="display: none;">
+      <small>Reel hiện tại: <span id="reelCount">0</span></small>
+    </div>
+
+    <div class="comment-section">
+      <h3>💬 Danh sách comment</h3>
+      <div class="add-comment">
+        <input type="text" id="commentInput" placeholder="Nhập comment mới..." maxlength="200">
+        <button id="addBtn" class="btn-add">Thêm</button>
+      </div>
+      <div id="commentList" class="comment-list">
+        <!-- Danh sách comment sẽ render ở đây -->
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
